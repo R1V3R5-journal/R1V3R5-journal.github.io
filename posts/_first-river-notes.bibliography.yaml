@@ -1,0 +1,13 @@
+gregor2015draw:
+  author: "Gregor, Karol; Danihelka, Ivo; Graves, Alex; Rezende, Danilo Jimenez; Wierstra, Daan"
+  year: "2015"
+  title: "DRAW: A recurrent neural network for image generation"
+  journal: "arXiv preprint arXiv:1502.04623"
+  url: "https://arxiv.org/pdf/1502.04623.pdf"
+
+olah2018building:
+  author: "Olah, Chris; Carter, Shan"
+  year: "2018"
+  title: "Attention and Augmented Recurrent Neural Networks"
+  journal: "Distill"
+  url: "https://distill.pub/2016/augmented-rnns/"

@@ -1,0 +1,8 @@
+@article{klotz2026first-river-notes,
+  author = {Klotz, Daniel},
+  title = {First River Notes},
+  journal = {R1V3R5 Journal},
+  year = {2026},
+  url = {https://example.org/posts/first-river-notes/},
+  doi = {10.23915/distill.river-journal.00001}
+}

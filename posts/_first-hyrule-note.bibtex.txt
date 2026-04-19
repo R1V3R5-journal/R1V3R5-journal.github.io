@@ -1,0 +1,8 @@
+@article{klotz2026second-river-notes,
+  author = {Klotz, Daniel},
+  title = {Second River Notes: Hyrule Hydrology in A Link to the Past},
+  journal = {R1V3R5 Journal},
+  year = {2026},
+  url = {https://example.org/posts/second-river-notes/},
+  doi = {10.23915/distill.river-journal.00002}
+}

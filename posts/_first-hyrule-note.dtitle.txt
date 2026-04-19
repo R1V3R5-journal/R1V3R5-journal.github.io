@@ -1,0 +1,1 @@
+A hydrologic reading of Lake Hylia, floodgates, and water warps in The Legend of Zelda: A Link to the Past, modeled as coupled light-world and dark-world flow networks.

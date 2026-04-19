@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" role="img" aria-labelledby="title desc">
+  <title id="title">River cross-section diagram</title>
+  <desc id="desc">A simplified cross-section showing banks, channel, and flow path.</desc>
+  <rect width="880" height="360" fill="#fbfaf6"/>
+  <path d="M0 240 C120 180, 230 170, 340 220 S560 290, 700 235 S820 170, 880 205 L880 360 L0 360 Z" fill="#dcecf5"/>
+  <path d="M0 255 C120 195, 230 185, 340 235 S560 305, 700 250 S820 185, 880 220" fill="none" stroke="#4e93b7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M30 155 L150 120" stroke="#444" stroke-width="2"/>
+  <path d="M835 130 L725 155" stroke="#444" stroke-width="2"/>
+  <path d="M440 105 L440 205" stroke="#444" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="34" y="150" font-family="Avenir Next, Avenir, sans-serif" font-size="20" fill="#222">left bank</text>
+  <text x="730" y="126" font-family="Avenir Next, Avenir, sans-serif" font-size="20" fill="#222">right bank</text>
+  <text x="458" y="120" font-family="Avenir Next, Avenir, sans-serif" font-size="20" fill="#222">channel depth</text>
+  <text x="345" y="270" font-family="Avenir Next, Avenir, sans-serif" font-size="20" fill="#1d5878">flow path</text>
+</svg>

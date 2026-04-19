@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on R1V3R5: An imaginary journal about fake rivers</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on R1V3R5: An imaginary journal about fake rivers</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hyrulean Hydrology: The riddle of  Lake Hylia in &#39;Zelda: A Link to the Past&#39;</title>
+      <link>http://localhost:1313/posts/first-hyrule-note/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/first-hyrule-note/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;section-anchor&#34; href=&#34;#introduction&#34; aria-label=&#34;Link to section Introduction&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;In &lt;em&gt;The Legend of Zelda: A Link to the Past&lt;/em&gt; (ALttP), Lake Hylia receives water from Zora&amp;rsquo;s River, but no downstream surface outlet is visible&lt;sup class=&#34;dt-cite-wrap&#34; id=&#34;cite-ref-zeldawikiLakeHylia2026&#34;&gt;&lt;a class=&#34;dt-cite&#34; href=&#34;#ref-zeldawikiLakeHylia2026&#34;&gt;[1]&lt;/a&gt;&lt;span class=&#34;dt-cite-pop&#34; role=&#34;note&#34;&gt;&lt;strong&gt;Zelda Wiki&lt;/strong&gt; (2026). Lake Hylia&lt;/span&gt;&lt;/sup&gt;.&#xA;That absence creates a hydrologic problem: if inflow persists, long-run water losses must also persist, or lake storage should rise over time&lt;sup class=&#34;dt-cite-wrap&#34; id=&#34;cite-ref-massBalanceHydrology&#34;&gt;&lt;a class=&#34;dt-cite&#34; href=&#34;#ref-massBalanceHydrology&#34;&gt;[2]&lt;/a&gt;&lt;span class=&#34;dt-cite-pop&#34; role=&#34;note&#34;&gt;&lt;strong&gt;Brutsaert, Wilfried&lt;/strong&gt; (2005). Hydrology: An Introduction&lt;/span&gt;&lt;/sup&gt; and dissolved load should accumulate.&lt;/p&gt;&#xA;&lt;p&gt;The contrast with the original &lt;em&gt;Legend of Zelda&lt;/em&gt; (NES) makes this omission interesting. In the first game, Lake Hylia is drawn with both incoming and outgoing rivers&lt;sup class=&#34;dt-cite-wrap&#34; id=&#34;cite-ref-zeldawikiLakeHylia2026&#34;&gt;&lt;a class=&#34;dt-cite&#34; href=&#34;#ref-zeldawikiLakeHylia2026&#34;&gt;[1]&lt;/a&gt;&lt;span class=&#34;dt-cite-pop&#34; role=&#34;note&#34;&gt;&lt;strong&gt;Zelda Wiki&lt;/strong&gt; (2026). Lake Hylia&lt;/span&gt;&lt;/sup&gt;. In ALttP, by comparison, inflow is mapped but a matching outflow is not. This raises two linked questions: (1) what process keeps water level approximately stable, and (2) what process prevents long-run dissolved-load accumulation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First River Notes</title>
+      <link>http://localhost:1313/posts/first-river-notes/</link>
+      <pubDate>Mon, 13 Apr 2026 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/first-river-notes/</guid>
+      <description>&lt;p&gt;This is the first post in the Hugo scaffold. The header above is animated and reseeds at every completed loop.&lt;/p&gt;&#xA;&lt;p&gt;Technical notes can now include inline math like $Q = A / v$ inside a paragraph without breaking the reading rhythm.&lt;/p&gt;&#xA;&lt;p&gt;Block equations also render in the article column:&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;R(x) = \int_0^L \frac{\partial h(x, t)}{\partial t} , dt&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;Distill-style inline citations look like this &lt;sup class=&#34;dt-cite-wrap&#34; id=&#34;cite-ref-gregor2015draw&#34;&gt;&lt;a class=&#34;dt-cite&#34; href=&#34;#ref-gregor2015draw&#34;&gt;[1]&lt;/a&gt;&lt;span class=&#34;dt-cite-pop&#34; role=&#34;note&#34;&gt;&lt;strong&gt;Gregor, Karol; Danihelka, Ivo; Graves, Alex; Rezende, Danilo Jimenez; Wierstra, Daan&lt;/strong&gt; (2015). DRAW: A recurrent neural network for image generation&lt;/span&gt;&lt;/sup&gt; and can be repeated without changing numbering &lt;sup class=&#34;dt-cite-wrap&#34; id=&#34;cite-ref-gregor2015draw&#34;&gt;&lt;a class=&#34;dt-cite&#34; href=&#34;#ref-gregor2015draw&#34;&gt;[1]&lt;/a&gt;&lt;span class=&#34;dt-cite-pop&#34; role=&#34;note&#34;&gt;&lt;strong&gt;Gregor, Karol; Danihelka, Ivo; Graves, Alex; Rezende, Danilo Jimenez; Wierstra, Daan&lt;/strong&gt; (2015). DRAW: A recurrent neural network for image generation&lt;/span&gt;&lt;/sup&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/</guid>
+      <description>&lt;p&gt;Initial draft published on 2026-04-17.&lt;/p&gt;&#xA;&lt;p&gt;No factual corrections have been recorded yet. Open an issue in the repository for map or terminology corrections.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/</guid>
+      <description>&lt;p&gt;No factual corrections have been made as of 2026-04-14.&lt;/p&gt;&#xA;&lt;p&gt;If you spot an issue, please open a ticket in the project repository.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

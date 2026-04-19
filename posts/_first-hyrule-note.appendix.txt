@@ -1,0 +1,181 @@
+### Appendix Index
+
+1. Appendix S1: Terminal-Lake vs. Open-Lake Salinity Behavior.
+2. Appendix S2: Symbolic Sensitivity of Hidden Outflow Terms.
+3. Appendix S3: Three Discriminating Predictions (In-Game Observable).
+4. Appendix S4: Dated ALttP Water-Asset Timeline (Anti-Overweighting Control).
+
+### Scope Note
+
+This article treats game geography as a conceptual hydrology model, not as literal physical simulation. The goal is explanatory coherence across map features, event logic, and warp behavior.
+
+### Methods Sketch
+
+1. Read visible channels as a classical surface network.
+2. Add warp links as nonlocal transport edges.
+3. Separate Light World and Dark World as coupled but distinct basins.
+4. Test whether mass balance can remain stable for Lake Hylia under this combined graph.
+
+### Limitations
+
+Map scale, transitions, and gameplay abstractions likely compress or omit intermediate channels.
+
+---
+
+### Appendix S1: Terminal-Lake vs. Open-Lake Salinity Behavior
+
+#### Salt-Balance Framework
+
+For any lake, the dissolved-load balance is:
+
+$$\frac{d(C \cdot S)}{dt} = C_{in} \cdot Q_{in} - C \cdot Q_{out},$$
+
+where $C$ is lake solute concentration, $S$ is lake storage volume, $C_{in}$ is inflow concentration, and $Q_{out}$ is surface outflow. Precipitation is assumed dilute ($C_P \approx 0$). Subsurface and warp pathways enter as additional $Q_{out}$ terms if present.
+
+#### Terminal Lake ($Q_{out} = 0$)
+
+When there is no surface outlet and no other export pathway, the right-hand side reduces to $C_{in} \cdot Q_{in} \geq 0$, so $C \cdot S$ can only increase. If storage $S$ is approximately stable (maintained by evaporation), lake concentration $C$ must increase monotonically. Because evaporation removes water but not solutes, no restoring export feedback appears.
+
+#### Open Lake ($Q_{out} > 0$)
+
+With surface outflow, the salt balance at steady state ($d/dt = 0$) gives a finite equilibrium concentration:
+
+$$C^* = \frac{C_{in} \cdot Q_{in}}{Q_{out}}.$$
+
+If water balance holds without evaporation ($Q_{out} \approx Q_{in}$), then $C^* \approx C_{in}$: lake salinity tracks inflow salinity and stays fresh. Even with evaporative loss reducing $Q_{out}$ below $Q_{in}$, $Q_{in}/Q_{out}$ remains bounded, so $C^*$ stays finite. Higher concentration increases exported dissolved load per unit outflow, providing restoring feedback toward $C^*$.
+
+The same argument applies when export is subsurface or warp-mediated rather than surface flow: any pathway carrying dissolved load at lake concentration can support a freshwater steady state.
+
+#### Climate Forcing Affects Rate, Not Direction
+
+Under **humid forcing** (high $P$, moderate $E$), a terminal lake still concentrates solutes, but more slowly because dilution is stronger. Under **semi-humid forcing** (moderate $P$, higher $E$), concentration accelerates. In both regimes, direction is unchanged: terminal basins salinize; open basins approach bounded steady state. Climate changes timescale, not outcome direction.
+
+#### Implication for Lake Hylia
+
+Lake Hylia receives sustained inflow and supports Zoras and fish species sensitive to water quality. These observations are inconsistent with long-run terminal-lake behavior under plausible forcing:
+
+1. A purely evaporative terminal lake (H0) predicts progressive solute accumulation regardless of climate regime; freshwater persistence contradicts this.
+2. Freshwater appearance is therefore independent evidence against terminal closure, separate from the storage-balance argument.
+3. Only a configuration with at least one dissolved-load export pathway — surface ($Q_{out}$), subsurface ($Q_{sub}$), or warp-mediated ($Q_{warp}$) — supports a bounded freshwater steady state.
+
+This appendix therefore provides a second diagnostic independent of the $\Delta S$ argument: persistent freshness requires an active export pathway.
+
+---
+
+### Appendix S2: Symbolic Sensitivity of Hidden Outflow Terms
+
+Start from the working balance:
+
+$$
+\Delta S = P + Q_{in} - E - Q_{out} - Q_{sub} - Q_{warp}.
+$$
+
+Define the hidden-outflow aggregate and forcing gap:
+
+$$
+Q_h \equiv Q_{sub}+Q_{warp}, \qquad B \equiv P + Q_{in} - E - Q_{out}.
+$$
+
+Then:
+
+$$
+\Delta S = B - Q_h.
+$$
+
+Long-run stability requires $\Delta S \approx 0$, so the hidden outflow requirement is:
+
+$$
+Q_h^{req} = B.
+$$
+
+This yields three symbolic regimes:
+
+1. If $B \le 0$, hidden outflow is not required for nonpositive storage trend ($Q_h^{req}=0$).
+2. If $B > 0$, hidden outflow is required and must satisfy $Q_h \ge B$ for non-growth and $Q_h = B$ for steady storage.
+3. If $Q_h < B$, then $\Delta S > 0$ and the lake expands over time.
+
+For a fixed climate and mapped terms, the minimal sufficiency condition in $(Q_{sub}, Q_{warp})$ space is the half-plane:
+
+$$
+Q_{sub} + Q_{warp} \ge B,
+$$
+
+with equality as the minimum boundary. This immediately shows which hidden-outflow combinations are minimally sufficient:
+
+- Subsurface-only sufficiency: $(Q_{sub},Q_{warp})=(B,0)$.
+- Warp-only sufficiency: $(Q_{sub},Q_{warp})=(0,B)$.
+- Mixed sufficiency: any pair with $Q_{sub}=\alpha B$, $Q_{warp}=(1-\alpha)B$, $0<\alpha<1$.
+
+Sensitivity is linear:
+
+$$
+\frac{\partial \Delta S}{\partial Q_{sub}} = -1, \qquad
+\frac{\partial \Delta S}{\partial Q_{warp}} = -1.
+$$
+
+So one unit increase in either hidden outflow term reduces storage tendency by the same amount. The data need is therefore not sensitivity estimation but partition identification: determining how much of $B$ is carried by $Q_{sub}$ versus $Q_{warp}$.
+
+Under humid forcing, $B$ is typically smaller (higher $P$ but often lower evaporative demand relative to available water), so the minimally sufficient hidden-outflow boundary shifts toward the origin. Under semi-humid forcing, higher effective evaporative demand can either reduce or increase $B$ depending on concurrent changes in $P$, $Q_{in}$, and mapped $Q_{out}$; the criterion is unchanged, but the threshold magnitude $B$ shifts with forcing.
+
+Result: when mapped terms leave $B>0$, long-run stability requires nonzero hidden outflow with feasible combinations on or above $Q_{sub}+Q_{warp}=B$.
+
+---
+
+### Appendix S3: Three Discriminating Predictions (In-Game Observable)
+
+These predictions are designed to separate two competing regimes using only ALttP-observable constraints: **subsurface-dominant** hidden discharge ($Q_{sub} \gg Q_{warp}$) versus **warp-dominant** hidden discharge ($Q_{warp} \gg Q_{sub}$).
+
+#### Prediction 1: Event-Gate Coupling Signature
+
+If hidden discharge is warp-dominant, Lake Hylia state should show conditional coupling to world-state gates already known to affect magical water routing (for example, swamp watergate logic): opening or closing a relevant gate should produce a detectable change in Lake Hylia-adjacent water behavior (accessibility, connectivity, or persistence cues) within the same play session.
+
+If hidden discharge is subsurface-dominant, Lake Hylia behavior should be comparatively insensitive to those event-gate toggles and remain stable across gate states.
+
+Operational test: compare Lake Hylia-adjacent water cues before/after gate toggles while holding route and timing constant.
+
+#### Prediction 2: Routing Topology Signature
+
+If hidden discharge is warp-dominant, at least one Lake Hylia-adjacent whirlpool path should map to a net-export topology (destination outside the local recirculation loop, or lower-head sink with no compensating return path).
+
+If hidden discharge is subsurface-dominant, whirlpool routing may remain closed-loop or bidirectional recirculation with zero net export, while long-run stability is still explained by non-warp leakage.
+
+Operational test: frame-by-frame destination audit for all Lake Hylia-adjacent whirlpools, with each route labeled `net-export` or `recirculation`.
+
+#### Prediction 3: Spatial Localization Signature
+
+If hidden discharge is subsurface-dominant, strongest discharge indicators should localize near cave-bearing and sinkhole-like terrain around Lake Hylia margins (persistent local leakage analogs, not global network dependence).
+
+If hidden discharge is warp-dominant, strongest indicators should localize at warp nodes and their network reachability structure, not at cave-adjacent terrain features.
+
+Operational test: construct a binary indicator map over Lake Hylia tiles (`near-cave/sinkhole-like` vs `warp-node-connected`) and score which class better predicts observed hydraulic cues.
+
+#### Decision Rule
+
+Treat the mechanism as provisionally dominant if at least two of the three predictions are satisfied for that mechanism under repeated, route-controlled observations. If results split 1-1-1, classify as mixed regime and retain both terms with conservative bounds.
+
+---
+
+### Appendix S4: Dated ALttP Water-Asset Timeline (Anti-Overweighting Control)
+
+The timeline below separates evidence by date and by datum type to avoid over-weighting any single map snapshot. Each row is tagged as exactly one of: `player-map representation`, `environment screen`, or `reconstruction`.
+
+| Date | Asset | Datum | Tag | Weighting rule |
+| --- | --- | --- | --- | --- |
+| 1990 (pre-release ALttP assets) | Lake Hylia | Prototype/recovered overworld material preserves Lake Hylia-linked inflow geometry in development-era data products {{< cite key="tcrfALttPOverworld2026" >}} | `reconstruction` | Treat as structural context only; do not use as stand-alone proof of final-game hydraulics. |
+| 1990 (pre-release ALttP assets) | Zora Falls / Zora's River headwaters | Development-era map layers indicate persistent upstream-to-downstream channel intent feeding the Lake Hylia side of the overworld {{< cite key="tcrfALttPOverworld2026" >}} | `reconstruction` | Use to support design continuity claims, not discharge quantification. |
+| 1991-11-21 (JP release, ALttP) | Lake Hylia | In playable overworld view, Lake Hylia receives mapped inflow while no explicit downstream surface outlet is shown {{< cite key="zeldawikiLakeHylia2026" >}} | `player-map representation` | High relevance for the missing-outlet puzzle; still pair with non-map evidence before causal inference. |
+| 1991-11-21 (JP release, ALttP) | Great Swamp | Overworld representation includes swamp node and nearby routing context connected to regional water topology {{< cite key="zeldawikiGreatSwamp2026" >}} | `player-map representation` | Use for topology and adjacency only; do not infer cross-world discharge from map geometry alone. |
+| 1991-11-21 (JP release, ALttP) | Zora Falls / Zora's River | Playable area and river course visually establish persistent upstream source feeding toward Lake Hylia {{< cite key="zeldawikiLakeHylia2026" >}} | `environment screen` | Use as direct inflow evidence in balance terms ($Q_{in}>0$), not as outlet evidence. |
+| 1991-11-21 (JP release, ALttP) | Great Swamp watergate -> Swamp Palace state | In-game event interaction shows Light World drainage control altering Dark World palace water state {{< cite key="zeldawikiGreatSwamp2026" >}} | `environment screen` | Highest-weight ALttP-internal evidence for non-surface hydraulic coupling. |
+| 1992-04-13 (NA release, ALttP) | Lake Hylia | Regional release reproduces the same operative map logic: visible inflow, no clearly mapped surface outlet {{< cite key="zeldawikiLakeHylia2026" >}} | `player-map representation` | Cross-check for consistency across releases; do not count as an independent mechanism proof if geometry is unchanged. |
+| 1992-09-24 (EU release, ALttP) | Great Swamp / Lake Hylia network context | Regional release preserves relevant topology and event structure used in the argument {{< cite key="zeldawikiGreatSwamp2026" >}} {{< cite key="zeldawikiLakeHylia2026" >}} | `player-map representation` | Replication strengthens robustness but still remains one evidence class. |
+
+#### Aggregation Protocol
+
+Apply a simple class-balance rule before drawing mechanism conclusions:
+
+1. Require at least one supporting datum from `environment screen` class for any hydraulic-effect claim.
+2. Cap `player-map representation` contributions at one independent vote per claim when entries are release-duplicate.
+3. Treat `reconstruction` as supportive context unless independently corroborated by in-game observations.
+
+This protocol prevents a single cartographic artifact from dominating inference and keeps ALttP-internal functional evidence as the primary discriminator.

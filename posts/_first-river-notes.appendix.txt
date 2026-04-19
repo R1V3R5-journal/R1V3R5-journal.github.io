@@ -1,0 +1,11 @@
+### Contributions
+
+Primary writing, layout adaptation, and implementation by Daniel Klotz.
+
+### Notes
+
+This appendix is loaded through the Distill-style support file mechanism in front matter.
+
+### Update Policy
+
+If you find errors, open an issue in the source repository and the note will be updated here.
