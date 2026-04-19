@@ -7,7 +7,7 @@
 <meta name="description" content="A hydrologic model for light-world rivers, dark-world basins, and water warps in Zelda: A Link to the Past." />
 
 
-<link rel="stylesheet" href="/css/distill-like.min.386c677e4650f3f3337b6ee87042f923add12f44f3062584ed353fe4aacb5783.css" integrity="sha256-OGxnfkZQ8/Mze27ocEL5I63RL0TzBiWE7TU/5KrLV4M=" />
+<link rel="stylesheet" href="/css/distill-like.min.dba2b284b0d56179cb1d36215fc7cecee23770cec9c4422e82efda866d8cfdc9.css" integrity="sha256-26KyhLDVYXnLHTYhX8fOzuI3cM7JxEIugu/ahm2M/ck=" />
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
@@ -112,9 +112,9 @@
     <h2 id="introduction">
   Introduction
   <a class="section-anchor" href="#introduction" aria-label="Link to section Introduction">#</a>
-</h2><p>In <em>The Legend of Zelda: A Link to the Past</em> (ALttP), Lake Hylia receives water from Zora&rsquo;s River, but no downstream surface outlet is visible<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup>.
+</h2><p>In <em>The Legend of Zelda: A Link to the Past</em> (ALttP), Lake Hylia receives water from Zora&rsquo;s River, but no downstream surface outlet is visible.<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup>
 That absence creates a hydrologic problem: if inflow persists, long-run water losses must also persist, or lake storage should rise over time<sup class="dt-cite-wrap" id="cite-ref-massBalanceHydrology"><a class="dt-cite" href="#ref-massBalanceHydrology">[2]</a><span class="dt-cite-pop" role="note"><strong>Brutsaert, Wilfried</strong> (2005). Hydrology: An Introduction</span></sup> and dissolved load should accumulate.</p>
-<p>The contrast with the original <em>Legend of Zelda</em> (NES) makes this omission interesting. In the first game, Lake Hylia is drawn with both incoming and outgoing rivers<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup>. In ALttP, by comparison, inflow is mapped but a matching outflow is not. This raises two linked questions: (1) what process keeps water level approximately stable, and (2) what process prevents long-run dissolved-load accumulation.</p>
+<p>The contrast with the original <em>Legend of Zelda</em> (NES) makes this omission interesting. In the first game, Lake Hylia is drawn with both incoming and outgoing rivers.<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup> In ALttP, by comparison, inflow is mapped but a matching outflow is not. This raises two linked questions: (1) what process keeps water level approximately stable, and (2) what process prevents long-run dissolved-load accumulation.</p>
 <p>The following hypotheses are evaluated as candidate explanations for this missing-loss problem:</p>
 <ul>
 <li>H0 (Closed-lake evaporation): Lake Hylia is effectively closed; evaporation balances storage, and observed freshness is only apparent or short-run.</li>
@@ -123,6 +123,12 @@ That absence creates a hydrologic problem: if inflow persists, long-run water lo
 <li>H3 (Warp-network export): Whirlpool waterways function as hydraulically meaningful export pathways, not only player transport.</li>
 <li>H4 (Fairy-mediated purification): Fairy activity maintains water quality directly. In its stronger form, the Pond of Happiness acts as a magical sink — a bottomless or magically voiding basin. It removes both water volume and dissolved load, contributing to $Q_{warp}$ and to freshness. In that case, H4 is a primary discharge mechanism, not just a quality filter.</li>
 </ul>
+<h3 id="related-work">
+  Related work
+  <a class="section-anchor" href="#related-work" aria-label="Link to section Related work">#</a>
+</h3><p>The closest precedent from within Zelda analysis is Any Austin&rsquo;s video series on virtual hydrology, specifically the investigations into Hyruelan hydrology. The most directly relevant instalment, *Where Do Hyrule&rsquo;s Rivers Go?*<sup class="dt-cite-wrap" id="cite-ref-anyAustinHyruleRivers"><a class="dt-cite" href="#ref-anyAustinHyruleRivers">[3]</a><span class="dt-cite-pop" role="note"><strong>Any Austin</strong> (2025). Where Do Hyrule&#39;s Rivers Go?</span></sup>, traces river routing across <em>Tears of the Kingdom</em>, mapping drainage paths and identifying where surface water terminates. That work establishes a route-tracing methodology and applies it to a later topographic instance of Hyrule. The present analysis addresses <em>A Link to the Past</em>, a different title with a different map. The two are therefore not topographically continuous, and route-level terminus tracing is treated here as a future empirical test for H3 rather than a completed analysis.</p>
+<p>To the best of our knowledge, no formal hydrologic investigations of Lake Hylia in <em>A Link to the Past</em> appears in the academic or semi-academic literature. However, community resources provide a rich factual baseline. Specifically, the Zelda Wiki documents lake position, river connections, and character dialogue<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup><sup class="dt-cite-wrap" id="cite-ref-zeldawikiWhirlpoolWaterway2026"><a class="dt-cite" href="#ref-zeldawikiWhirlpoolWaterway2026">[4]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Whirlpool Waterway</span></sup>; Zelda Dungeon supplies overworld and Dark World map context<sup class="dt-cite-wrap" id="cite-ref-zeldadungeonMaps"><a class="dt-cite" href="#ref-zeldadungeonMaps">[5]</a><span class="dt-cite-pop" role="note"><strong>Zelda Dungeon</strong> (2026). A Link to the Past Overworld and Dark World Maps</span></sup>; TCRF reconstructs overworld asset history and revision metadata<sup class="dt-cite-wrap" id="cite-ref-tcrfALttPOverworld2026"><a class="dt-cite" href="#ref-tcrfALttPOverworld2026">[6]</a><span class="dt-cite-pop" role="note"><strong>The Cutting Room Floor</strong> (2026). Development: The Legend of Zelda: A Link to the Past/Overworld</span></sup>; and community map-comparison threads discuss inter-title geographic alignment, with accompanying caveats about orientation and toponym reuse.<sup class="dt-cite-wrap" id="cite-ref-redditLakeHyliaMapThread2018"><a class="dt-cite" href="#ref-redditLakeHyliaMapThread2018">[7]</a><span class="dt-cite-pop" role="note"><strong>weplantsarehappy et al.</strong> (2018). Let&#39;s look at some maps! Lake Hylia (ALttP vs Minish Cap)</span></sup></p>
+<p>The methodological antecedents are from real-world lake hydrology. Standard water-balance treatments, including the closed- versus open-basin distinction, follow Brutsaert (2005).<sup class="dt-cite-wrap" id="cite-ref-massBalanceHydrology"><a class="dt-cite" href="#ref-massBalanceHydrology">[2]</a><span class="dt-cite-pop" role="note"><strong>Brutsaert, Wilfried</strong> (2005). Hydrology: An Introduction</span></sup> The endorheic-lake literature provides the closest real-world analogues to H0. Closed basins such as the Dead Sea and Great Salt Lake balance sustained inflow through evaporation and carry strong dissolved-load signatures from centuries of solute accumulation. Those cases motivate both the evaporation-balance criterion and the independent freshness test applied below.</p>
 <h2 id="method">
   Method
   <a class="section-anchor" href="#method" aria-label="Link to section Method">#</a>
@@ -138,7 +144,7 @@ $$</p>
 <p>$$
 \Delta S = P + Q_{in} - E - Q_{out} - Q_{sub} - Q_{warp}.
 $$</p>
-<p>Here $Q_{sub}$ is subterranean discharge and $Q_{warp}$ is discharge through magical waterways. Climate affects both sides of this balance. The opening storm in <em>A Link to the Past</em> shows that $P$ is not zero in the Light World, but a single event does not establish long-run climate. The nearby Desert of Mystery still allows a plausible precipitation gradient or rain-shadow effect that could raise evaporative demand in some areas.</p>
+<p>Here $Q_{sub}$ is subterranean discharge and $Q_{warp}$ is discharge through magical waterways. Climate affects both sides of this balance. The opening storm in <em>A Link to the Past</em> shows that $P$ is nonzero in the Light World, but a single event does not establish long-run climate (Figure 1). The nearby Desert of Mystery still allows a plausible precipitation gradient or rain-shadow effect that could raise evaporative demand in some areas.</p>
 <figure class="distill-figure l-body"><img src="/first-hyrule-note/rain-evdience.png" alt="Opening scene with Link standing in front of his house. Clear evidence that rain exists in the game." loading="lazy" /><figcaption>
     <span class="figure-label">Figure 1</span>
     <span class="figure-title">Opening-storm precipitation evidence in ALttP</span>
@@ -157,19 +163,6 @@ $$</p>
 E_{req} \approx \frac{Q_{in} + P - Q_{out}}{A_{lake}} \text{ with } Q_{out}=0.
 $$</p>
 <p>That is, $E_{req}$ is controlled by inflow volume relative to lake surface area. If Zora&rsquo;s River is high-throughput and Lake Hylia&rsquo;s area is limited, the required evaporation depth becomes very large under many plausible climate regimes. This ratio argument does not require exact discharge values: small $A_{lake}$/large $Q_{in}$ pushes $E_{req}$ upward and weakens H0.</p>
-<h3 id="inflow-magnitude-proxy">
-  Inflow Magnitude Proxy
-  <a class="section-anchor" href="#inflow-magnitude-proxy" aria-label="Link to section Inflow Magnitude Proxy">#</a>
-</h3><p>ALttP does not provide physical units, so this analysis uses a reproducible proxy rather than invented discharge values. Consider the dimensionless inflow index:</p>
-<p>$$
-I = \frac{W U N_{in}}{A_{lake}},
-$$</p>
-<p>where $W$ is mapped inflow-channel width in tiles,
-$U$ is surface-current speed in tiles per second (or traversal-time inverse),
-$N_{in}$ is the number of persistent inflow entries,
-and $A_{lake}$ is lake area in tiles.
-A larger $I$ means larger inflow per unit lake area and, therefore, larger required $E_{req}$ under H0.</p>
-<p>This analysis provisionally treats Zora&rsquo;s River inflow as at least moderate to high on this index, based on persistent mountain-fed channel geometry and visible throughput cues. The next revision should report measured $I$ values from frame-counted movement and tile-area mapping.</p>
 <h3 id="freshness-criterion">
   Freshness Criterion
   <a class="section-anchor" href="#freshness-criterion" aria-label="Link to section Freshness Criterion">#</a>
@@ -177,9 +170,9 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
 <h3 id="candidate-mechanisms">
   Candidate Mechanisms
   <a class="section-anchor" href="#candidate-mechanisms" aria-label="Link to section Candidate Mechanisms">#</a>
-</h3><p>Hypotheses H0-H4 are defined in the Introduction. In Methods, we evaluate them with a common standard: each candidate must satisfy storage balance and dissolved-load constraints while remaining consistent with in-game evidence.</p>
+</h3><p>We evaluate hypotheses H0-H4 with one standard: each candidate must satisfy storage balance and dissolved-load constraints while matching in-game evidence.</p>
 <p>To avoid using magical claims as gap-fillers, we apply a terrestrial-first inference rule. Explanations that require no special ontology (H1, H2) are evaluated first and retained unless ALttP evidence contradicts them. Under this rule, terrestrial geomorphic signals count as positive support for H2, including cave-adjacent terrain and recurring pit-fall depressions that can be read as sinkhole-like karst analogs. Because these pits are gameplay features rather than surveyed geology, we treat them as suggestive terrain evidence, not direct proof of active subsurface discharge. Magical mechanisms (H3, H4) must satisfy the same mass-balance constraints and also carry positive in-game support beyond narrative plausibility.</p>
-<p>These are not equally plausible. We use the observations below to rank them.</p>
+<p>These hypotheses are not equally plausible; observations below are used to rank them.</p>
 <h2 id="observations">
   Observations
   <a class="section-anchor" href="#observations" aria-label="Link to section Observations">#</a>
@@ -187,7 +180,7 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
 <h3 id="inflow-without-a-surface-outlet">
   Inflow Without a Surface Outlet
   <a class="section-anchor" href="#inflow-without-a-surface-outlet" aria-label="Link to section Inflow Without a Surface Outlet">#</a>
-</h3><p>Lake Hylia sits at the southeast end of the Light World overworld. Reference material confirms inflow from Zora&rsquo;s River<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup> and no comparable downstream channel on the same map. This observation anchors the storage and salinity tests defined above.</p>
+</h3><p>Lake Hylia sits at the southeast end of the Light World overworld. Reference material confirms inflow from Zora&rsquo;s River<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup> and no comparable downstream channel on the same map. This observation anchors the storage and salinity tests defined above (Figure 2).</p>
 <figure class="distill-figure l-body"><img src="/first-hyrule-note/map.png" alt="Map of Hyrule in ALttP with Lake Hylia in the lower-left border region, corresponding to the southeast sector" loading="lazy" /><figcaption>
     <span class="figure-label">Figure 2</span>
     <span class="figure-title">Hyrule map context for Lake Hylia location</span>
@@ -203,7 +196,7 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
 <h3 id="a-nonclassical-water-network-adjacent-to-the-lake">
   A Nonclassical Water Network Adjacent to the Lake
   <a class="section-anchor" href="#a-nonclassical-water-network-adjacent-to-the-lake" aria-label="Link to section A Nonclassical Water Network Adjacent to the Lake">#</a>
-</h3><p>The first key clue is the documented whirlpool-waterway network. <em>A Link to the Past</em> has six magical whirlpools in the Light World. Two are adjacent to Lake Hylia: one southeast of the lake and one just south of the Pond of Happiness<sup class="dt-cite-wrap" id="cite-ref-zeldawikiWhirlpoolWaterway2026"><a class="dt-cite" href="#ref-zeldawikiWhirlpoolWaterway2026">[3]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Whirlpool Waterway</span></sup>. King Zora describes them as &ldquo;magic water ways of the sea folk which link lakes and rivers.&rdquo; This does not prove bulk export, but it does show that Lake Hylia connects to a transport network not drawn as a normal river channel.</p>
+</h3><p>The first key clue is the documented whirlpool-waterway network. <em>A Link to the Past</em> has six magical whirlpools in the Light World. Two are adjacent to Lake Hylia: one southeast of the lake and one just south of the Pond of Happiness.<sup class="dt-cite-wrap" id="cite-ref-zeldawikiWhirlpoolWaterway2026"><a class="dt-cite" href="#ref-zeldawikiWhirlpoolWaterway2026">[4]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Whirlpool Waterway</span></sup> King Zora describes them as &ldquo;magic water ways of the sea folk which link lakes and rivers.&rdquo; This does not prove bulk export, but it does show a lake connection outside ordinary mapped channels (Figure 3).</p>
 <figure class="distill-figure l-body"><img src="/first-hyrule-note/waterwhirls.gif" alt="Animated gameplay sequence showing Link entering the Zora warp whirlpool at Lake Hylia and exiting upstream near Zora&#39;s River." loading="lazy" /><figcaption>
     <span class="figure-label">Figure 3</span>
     <span class="figure-title">Lake Hylia whirlpool traversal in ALttP</span>
@@ -216,16 +209,16 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
     
   </figcaption>
 </figure>
-<p>Adjacent cave structure offers a second, weaker clue. ALttP source material places the Ice Cave on the east side of Lake Hylia<sup class="dt-cite-wrap" id="cite-ref-zeldawikiIceCave2026"><a class="dt-cite" href="#ref-zeldawikiIceCave2026">[4]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Ice Cave</span></sup>. This does not demonstrate active lake discharge, but it makes near-lake subsurface routing physically plausible in the same terrain.</p>
+<p>Adjacent cave structure offers a second, weaker clue. ALttP source material places the Ice Cave on the east side of Lake Hylia.<sup class="dt-cite-wrap" id="cite-ref-zeldawikiIceCave2026"><a class="dt-cite" href="#ref-zeldawikiIceCave2026">[8]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Ice Cave</span></sup> This does not demonstrate active lake discharge, but it makes near-lake subsurface routing physically plausible in the same terrain.</p>
 <h3 id="cross-world-water-control">
   Cross-World Water Control
   <a class="section-anchor" href="#cross-world-water-control" aria-label="Link to section Cross-World Water Control">#</a>
-</h3><p>The Great Swamp provides the next clue. Draining water outside the swamp ruins in the Light World directly alters water conditions inside the Swamp Palace in the Dark World<sup class="dt-cite-wrap" id="cite-ref-zeldawikiGreatSwamp2026"><a class="dt-cite" href="#ref-zeldawikiGreatSwamp2026">[5]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Great Swamp</span></sup>. So Hyrule&rsquo;s water logic is not confined to visible surface geometry. Water state can cross world boundaries. This does not directly implicate Lake Hylia, but it establishes a key principle: map absence is not hydraulic absence.</p>
-<p>The Great Swamp-Lake Hylia link is indirect in ALttP. The direct evidence is cross-world control at the swamp watergate<sup class="dt-cite-wrap" id="cite-ref-zeldawikiGreatSwamp2026"><a class="dt-cite" href="#ref-zeldawikiGreatSwamp2026">[5]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Great Swamp</span></sup>. The structural evidence is that both Great Swamp and Lake Hylia are nodes in the documented whirlpool network, and that the swamp&rsquo;s southeast exit leads toward Lake Hylia<sup class="dt-cite-wrap" id="cite-ref-zeldawikiWhirlpoolWaterway2026"><a class="dt-cite" href="#ref-zeldawikiWhirlpoolWaterway2026">[3]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Whirlpool Waterway</span></sup><sup class="dt-cite-wrap" id="cite-ref-zeldawikiGreatSwamp2026"><a class="dt-cite" href="#ref-zeldawikiGreatSwamp2026">[5]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Great Swamp</span></sup>. ALttP itself never explicitly states that a surface river links them.</p>
+</h3><p>The Great Swamp provides the next clue. Draining water outside the swamp ruins in the Light World directly alters water conditions inside the Swamp Palace in the Dark World.<sup class="dt-cite-wrap" id="cite-ref-zeldawikiGreatSwamp2026"><a class="dt-cite" href="#ref-zeldawikiGreatSwamp2026">[9]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Great Swamp</span></sup> So Hyrule&rsquo;s water logic is not confined to visible surface geometry. Water state can cross world boundaries. This does not directly implicate Lake Hylia, but it establishes a key principle: map absence is not hydraulic absence.</p>
+<p>The Great Swamp-Lake Hylia link is indirect in ALttP. The direct evidence is cross-world control at the swamp watergate.<sup class="dt-cite-wrap" id="cite-ref-zeldawikiGreatSwamp2026"><a class="dt-cite" href="#ref-zeldawikiGreatSwamp2026">[9]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Great Swamp</span></sup> The structural evidence is that both Great Swamp and Lake Hylia are nodes in the documented whirlpool network, and that the swamp&rsquo;s southeast exit leads toward Lake Hylia.<sup class="dt-cite-wrap" id="cite-ref-zeldawikiWhirlpoolWaterway2026"><a class="dt-cite" href="#ref-zeldawikiWhirlpoolWaterway2026">[4]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Whirlpool Waterway</span></sup><sup class="dt-cite-wrap" id="cite-ref-zeldawikiGreatSwamp2026"><a class="dt-cite" href="#ref-zeldawikiGreatSwamp2026">[9]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Great Swamp</span></sup> ALttP itself never explicitly states that a surface river links them.</p>
 <h3 id="terrestrial-leakage-signals-near-the-basin">
   Terrestrial Leakage Signals Near the Basin
   <a class="section-anchor" href="#terrestrial-leakage-signals-near-the-basin" aria-label="Link to section Terrestrial Leakage Signals Near the Basin">#</a>
-</h3><p>Applying the terrestrial-first rule requires checking for non-magical leakage indicators before crediting warp discharge. ALttP presents two such indicators around the Lake Hylia setting: cave-bearing margins (Ice Cave on the east side) and repeated pit-fall depressions across nearby terrain that function as sinkhole-like voids in traversal logic. The pit features are interpreted as geomorphic analogs, not literal field measurements. They do not prove active groundwater export by themselves, but together with cave-bearing margins they make a leaky-basin interpretation more plausible than a perfectly sealed basin.</p>
+</h3><p>Applying the terrestrial-first rule means checking non-magical leakage indicators before crediting warp discharge. ALttP presents two around Lake Hylia: cave-bearing margins (Ice Cave on the east side) and repeated pit-fall depressions interpreted as sinkhole-like geomorphic analogs. These are not direct hydraulic measurements and do not prove active groundwater export by themselves, but together they make a leaky-basin interpretation more plausible than a perfectly sealed basin.</p>
 <h2 id="results-and-discussion">
   Results and Discussion
   <a class="section-anchor" href="#results-and-discussion" aria-label="Link to section Results and Discussion">#</a>
@@ -234,29 +227,28 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
 <li>H0 (Closed-lake evaporation): strongly disfavored, but not eliminated. Climate forcing is uncertain (storm evidence, plus a possible regional gradient near the Desert of Mystery), yet evaporation-only balance remains difficult to reconcile with sustained inflow and long-run freshwater persistence.</li>
 <li>H1 (Map-omitted outlet): possible but weak. It is hard to falsify and adds little beyond cartographic uncertainty.</li>
 <li>H2 (Subsurface outflow): plausible but explicitly conditional on hydraulic head. Because Lake Hylia is the lowest mapped Light World node, H2 is viable only if an unmapped lower-head sink exists and is hydraulically connected.</li>
-<li>H3 (Warp-network export): conditionally plausible but uncredited in the current mass balance. Whirlpool connectivity near Lake Hylia is documented, but H3 works only if destinations leave the Lake Hylia basin or reach lower head with no return path. If Lake Hylia whirlpools are bidirectional and reconnect to Zora&rsquo;s River, they are recirculation and $Q_{warp} \approx 0$ for net export. Frame-by-frame destination mapping is required before H3 can count as discharge. Priority test: does any Lake Hylia route terminate in Great Swamp, where event-gated drainage could create a trans-dimensional $Q_{warp}$ sink?</li>
+<li>H3 (Warp-network export): conditionally plausible but uncredited in the current mass balance. Whirlpool connectivity near Lake Hylia is documented, but H3 works only if destinations leave the Lake Hylia basin or reach lower head with no return path. If Lake Hylia whirlpools are bidirectional and reconnect to Zora&rsquo;s River, they are recirculation and $Q_{warp} \approx 0$ for net export.</li>
 <li>H4 (Fairy-mediated purification): stronger than initially framed. In its weak form it is a quality filter only. In its strong form, the Pond of Happiness acts as a magical sink that removes both water volume and dissolved solids, contributing to $Q_{warp}$ and freshness. The strong form is not ruled out by ALttP evidence and would resolve storage and salinity together. It remains bounded by the absence of an explicit in-game statement confirming volumetric loss.</li>
 </ul>
-<p>Overall, H2 is the current baseline. H3 and H4b remain open pending direct hydraulic evidence, and H4a remains a quality-only mechanism.</p>
 <h3 id="the-map-cannot-be-the-whole-story">
   The Map Cannot Be the Whole Story
   <a class="section-anchor" href="#the-map-cannot-be-the-whole-story" aria-label="Link to section The Map Cannot Be the Whole Story">#</a>
-</h3><p>Persistent inflow with no effective outflow yields $\Delta S &gt; 0$ over long intervals. The lake would expand, flood nearby lowlands, or require arbitrary resets. None of these outcomes fits the overworld, so we need an unseen loss term. The weakest candidate is simple map omission: a real outlet that was not drawn. That explanation is unfalsifiable within the game and leaves the puzzle unresolved. It also underuses evidence the game itself provides.</p>
-<p>Development records sharpen this point. TCRF&rsquo;s reconstruction of ALttP overworld assets reports that Lake Hylia-linked material from 1990 already preserves bridge-and-river geometry draining toward the lake. It also notes that many map layers in the same archive are representational or reconstruction-dependent, not one-to-one captures of final explorable geometry<sup class="dt-cite-wrap" id="cite-ref-tcrfALttPOverworld2026"><a class="dt-cite" href="#ref-tcrfALttPOverworld2026">[6]</a><span class="dt-cite-pop" role="note"><strong>The Cutting Room Floor</strong> (2026). Development: The Legend of Zelda: A Link to the Past/Overworld</span></sup>. Persistent inflow appears intentional across revisions, but outlet absence in any single map artifact is not proof of hydraulic closure.</p>
+</h3><p>The weakest candidate is simple map omission: a real outlet that was not drawn. That explanation is hard to falsify in-game and underuses available evidence.</p>
+<p>Development records sharpen this point. TCRF&rsquo;s reconstruction of ALttP overworld assets reports that Lake Hylia-linked material from 1990 already preserves bridge-and-river geometry draining toward the lake. It also notes that many map layers in the same archive are representational or reconstruction-dependent rather than one-to-one captures of final explorable geometry.<sup class="dt-cite-wrap" id="cite-ref-tcrfALttPOverworld2026"><a class="dt-cite" href="#ref-tcrfALttPOverworld2026">[6]</a><span class="dt-cite-pop" role="note"><strong>The Cutting Room Floor</strong> (2026). Development: The Legend of Zelda: A Link to the Past/Overworld</span></sup> Persistent inflow appears intentional across revisions. But outlet absence in any single map artifact is not proof of hydraulic closure.</p>
 <h3 id="freshness-narrows-the-field-further">
   Freshness Narrows the Field Further
   <a class="section-anchor" href="#freshness-narrows-the-field-further" aria-label="Link to section Freshness Narrows the Field Further">#</a>
-</h3><p>In a terminal basin, evaporation removes water but leaves solutes behind. The concentration rate can vary by climate regime, but the direction is always the same. A persistently fresh, inhabited, Zora-linked lake does not match a long-run terminal basin. The salinity criterion rules out pure evaporative balance as a sufficient explanation, so map omission is not enough even if granted. Something must actively export dissolved load.</p>
+</h3><p>Applying the salinity criterion, a persistently fresh, inhabited, Zora-linked lake is difficult to reconcile with long-run terminal-basin behavior. Pure evaporative closure is therefore insufficient; some dissolved-load export term is still required.</p>
 <h3 id="synthesis">
   Synthesis
   <a class="section-anchor" href="#synthesis" aria-label="Link to section Synthesis">#</a>
 </h3><p>Hidden discharge is better supported than strict closure, with H2 as the conservative baseline and H3/H4b as conditional extensions.</p>
-<p>For H3 specifically, recirculation remains the central unresolved risk. Lake Hylia whirlpools can count as discharge only if destination mapping shows net export rather than return flow to the same basin. The highest-value discriminator is still route tracing to Great Swamp, where documented cross-world drainage could supply a trans-dimensional loss term.</p>
-<p>ALttP therefore supports mechanism plausibility but not mechanism identification. The evidence favors an unseen loss term, yet the decisive routing test remains open.</p>
+<p>For H3, recirculation remains the key unresolved risk. Lake Hylia whirlpools count as discharge only if destination mapping shows net export rather than return flow to the same basin. The highest-value discriminator is route tracing to Great Swamp, where documented cross-world drainage could supply a trans-dimensional loss term.</p>
+<p>ALttP supports mechanism plausibility but not mechanism identification. Evidence favors an unseen loss term, but the decisive routing test remains open.</p>
 <h3 id="subsurface-outflow-h2">
   Subsurface Outflow (H2)
   <a class="section-anchor" href="#subsurface-outflow-h2" aria-label="Link to section Subsurface Outflow (H2)">#</a>
-</h3><p>H2 is the most conservative discharge candidate. It needs no game-specific infrastructure: karst conduits, fracture zones, and cave seepage are standard at lake margins with cave terrain. ALttP places the Ice Cave on Lake Hylia&rsquo;s east side, so the margin is not sealed impermeable bedrock. More broadly, recurring pit-fall depressions in regional terrain are consistent with sinkhole-like expression, which strengthens the terrestrial-first case for a leaky substrate rather than an impermeable basin floor. This remains analogical support: the pits are gameplay terrain cues, not direct hydraulic observations. Elevation sets the key constraint. Lake Hylia appears to be the lowest mapped Light World node, so non-magical $Q_{sub}$ requires a sink at even lower hydraulic head than the mapped surface system. That sink could be off-map coastal discharge, deep regional groundwater, or another unmapped lower receiver, but it must exist for sustained export rather than recirculation. No in-game evidence rules H2 out. Its weakness is that direct hydraulic connectivity remains unverified even though terrestrial leakage signals are present.</p>
+</h3><p>H2 is the most conservative discharge candidate. As observed above, cave-bearing margins and sinkhole-like terrain cues are consistent with a leaky substrate, but they remain analogical rather than direct hydraulic measurements. Elevation sets the key constraint: because Lake Hylia appears to be the lowest mapped Light World node, non-magical $Q_{sub}$ requires a sink at even lower hydraulic head than the mapped surface system. That sink could be off-map coastal discharge, deep regional groundwater, or another unmapped lower receiver. But it must exist for sustained export rather than recirculation. No in-game evidence rules H2 out; its weakness is unverified hydraulic connectivity.</p>
 <table>
   <thead>
       <tr>
@@ -267,7 +259,7 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
   </thead>
   <tbody>
       <tr>
-          <td>Ice Cave is located on the east side of Lake Hylia, indicating non-impermeable terrain<sup class="dt-cite-wrap" id="cite-ref-zeldawikiIceCave2026"><a class="dt-cite" href="#ref-zeldawikiIceCave2026">[4]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Ice Cave</span></sup></td>
+          <td>Ice Cave is located on the east side of Lake Hylia, indicating non-impermeable terrain<sup class="dt-cite-wrap" id="cite-ref-zeldawikiIceCave2026"><a class="dt-cite" href="#ref-zeldawikiIceCave2026">[8]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Ice Cave</span></sup></td>
           <td>Direct ALttP location evidence</td>
           <td>Medium</td>
       </tr>
@@ -306,7 +298,7 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
 <h3 id="warp-network-export-h3">
   Warp-Network Export (H3)
   <a class="section-anchor" href="#warp-network-export-h3" aria-label="Link to section Warp-Network Export (H3)">#</a>
-</h3><p>H3 is game-specific and structurally attractive, but it has one unresolved internal constraint: recirculation. Evidence for nearby whirlpools is strong. Evidence that they produce net discharge rather than recirculation is absent.</p>
+</h3><p>H3 is game-specific and structurally attractive, but has one unresolved constraint: recirculation. Evidence for nearby whirlpools is strong; evidence that they produce net discharge rather than recirculation is absent.</p>
 <table>
   <thead>
       <tr>
@@ -317,17 +309,17 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
   </thead>
   <tbody>
       <tr>
-          <td>Two whirlpools are documented adjacent to Lake Hylia<sup class="dt-cite-wrap" id="cite-ref-zeldawikiWhirlpoolWaterway2026"><a class="dt-cite" href="#ref-zeldawikiWhirlpoolWaterway2026">[3]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Whirlpool Waterway</span></sup></td>
+          <td>Two whirlpools are documented adjacent to Lake Hylia<sup class="dt-cite-wrap" id="cite-ref-zeldawikiWhirlpoolWaterway2026"><a class="dt-cite" href="#ref-zeldawikiWhirlpoolWaterway2026">[4]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Whirlpool Waterway</span></sup></td>
           <td>Direct ALttP location evidence</td>
           <td>High</td>
       </tr>
       <tr>
-          <td>King Zora names whirlpools as &ldquo;magic water ways of the sea folk which link lakes and rivers&quot;<sup class="dt-cite-wrap" id="cite-ref-zeldawikiWhirlpoolWaterway2026"><a class="dt-cite" href="#ref-zeldawikiWhirlpoolWaterway2026">[3]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Whirlpool Waterway</span></sup></td>
+          <td>King Zora names whirlpools as &ldquo;magic water ways of the sea folk which link lakes and rivers&quot;<sup class="dt-cite-wrap" id="cite-ref-zeldawikiWhirlpoolWaterway2026"><a class="dt-cite" href="#ref-zeldawikiWhirlpoolWaterway2026">[4]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Whirlpool Waterway</span></sup></td>
           <td>Direct ALttP in-game dialogue</td>
           <td>High</td>
       </tr>
       <tr>
-          <td>Great Swamp drainage in the Light World alters Swamp Palace water conditions in the Dark World<sup class="dt-cite-wrap" id="cite-ref-zeldawikiGreatSwamp2026"><a class="dt-cite" href="#ref-zeldawikiGreatSwamp2026">[5]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Great Swamp</span></sup></td>
+          <td>Great Swamp drainage in the Light World alters Swamp Palace water conditions in the Dark World<sup class="dt-cite-wrap" id="cite-ref-zeldawikiGreatSwamp2026"><a class="dt-cite" href="#ref-zeldawikiGreatSwamp2026">[9]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Great Swamp</span></sup></td>
           <td>Direct ALttP functional evidence</td>
           <td>High</td>
       </tr>
@@ -357,9 +349,9 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
   Bounded Fairy-Purification Hypothesis
   <a class="section-anchor" href="#bounded-fairy-purification-hypothesis" aria-label="Link to section Bounded Fairy-Purification Hypothesis">#</a>
 </h3><p>H4 needs a sharper split than the initial framing suggests. We separate two distinct versions of the claim.</p>
-<p>The <strong>weak form</strong> (H4a) treats fairy activity as a water-quality filter. Fairies suppress or remove dissolved solids and contaminants, keeping Lake Hylia fresh without meaningful volumetric outflow. This form has the strongest cross-game support: in <em>Oracle of Ages</em>, the Fairy Queen can &ldquo;cleanse the seas of evil&quot;<sup class="dt-cite-wrap" id="cite-ref-zeldawikiFairyQueen2026"><a class="dt-cite" href="#ref-zeldawikiFairyQueen2026">[7]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Fairy Queen</span></sup>. But that statement comes from a different narrative and topography, and from a sea context rather than a lake context. The analogy is suggestive, not directly transferable. In any case, H4a does not solve the $\Delta S &gt; 0$ problem.</p>
-<p>The <strong>strong form</strong> (H4b) treats the Pond of Happiness as a magical sink: a bottomless or magically voiding basin that removes both water volume and dissolved load from the Lake Hylia system. If true, it adds a positive $Q_{warp}$ term, meaning discharge through a magical pathway rather than a conventional surface channel. It would also eliminate salt accumulation. In that case, H4 is a primary discharge mechanism, not just a complement to H2 or H3.</p>
-<p>In ALttP, the Pond of Happiness sits on a Lake Hylia island and is inhabited by Venus, the Fairy Queen<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup><sup class="dt-cite-wrap" id="cite-ref-zeldawikiFairyQueen2026"><a class="dt-cite" href="#ref-zeldawikiFairyQueen2026">[7]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Fairy Queen</span></sup>. The game does not explicitly say the pond drains lake volume, but it does not rule it out either. A pond on an island inside an otherwise sealed lake is unusual enough to keep the strong form live. ALttP leaves H4b open; it does not confirm it.</p>
+<p>The <strong>weak form</strong> (H4a) treats fairy activity as a water-quality filter. Fairies suppress or remove dissolved solids and contaminants, keeping Lake Hylia fresh without meaningful volumetric outflow. This form has the strongest cross-game support: in <em>Oracle of Ages</em>, the Fairy Queen can &ldquo;cleanse the seas of evil&rdquo;.<sup class="dt-cite-wrap" id="cite-ref-zeldawikiFairyQueen2026"><a class="dt-cite" href="#ref-zeldawikiFairyQueen2026">[10]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Fairy Queen</span></sup> That statement, however, comes from a different narrative and topography, and from a sea context rather than a lake context. The analogy is suggestive, not directly transferable. H4a also does not solve the $\Delta S &gt; 0$ problem.</p>
+<p>The <strong>strong form</strong> (H4b) treats the Pond of Happiness as a magical sink: a bottomless or magically voiding basin that removes both water volume and dissolved load from the Lake Hylia system. If true, it adds a positive $Q_{warp}$ term, meaning discharge through a magical pathway rather than a conventional surface channel, and it would also eliminate salt accumulation. In that case, H4 is a primary discharge mechanism, not just a complement to H2 or H3.</p>
+<p>In ALttP, the Pond of Happiness sits on a Lake Hylia island and is inhabited by Venus, the Fairy Queen.<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup><sup class="dt-cite-wrap" id="cite-ref-zeldawikiFairyQueen2026"><a class="dt-cite" href="#ref-zeldawikiFairyQueen2026">[10]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Fairy Queen</span></sup> The game does not explicitly say the pond drains lake volume, but it does not rule it out either. A pond on an island inside an otherwise sealed lake is unusual enough to keep the strong form live. ALttP leaves H4b open; it does not confirm it.</p>
 <p>H4a is treated as bounded and supported mainly by cross-game evidence. H4b remains open as an ALttP hypothesis that would, if confirmed, resolve both storage and salinity without requiring H2 or H3.</p>
 <table>
   <thead>
@@ -371,18 +363,18 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
   </thead>
   <tbody>
       <tr>
-          <td>Fairies are associated with Lake Hylia in ALttP (Venus at Pond of Happiness)<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup><sup class="dt-cite-wrap" id="cite-ref-zeldawikiFairyQueen2026"><a class="dt-cite" href="#ref-zeldawikiFairyQueen2026">[7]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Fairy Queen</span></sup></td>
+          <td>Fairies are associated with Lake Hylia in ALttP (Venus at Pond of Happiness)<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup><sup class="dt-cite-wrap" id="cite-ref-zeldawikiFairyQueen2026"><a class="dt-cite" href="#ref-zeldawikiFairyQueen2026">[10]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Fairy Queen</span></sup></td>
           <td>Direct ALttP location evidence</td>
           <td>High</td>
       </tr>
       <tr>
-          <td>Fairies maintain healing/magical spring functions in ALttP fairy ponds<sup class="dt-cite-wrap" id="cite-ref-zeldawikiFairyQueen2026"><a class="dt-cite" href="#ref-zeldawikiFairyQueen2026">[7]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Fairy Queen</span></sup></td>
+          <td>Fairies maintain healing/magical spring functions in ALttP fairy ponds<sup class="dt-cite-wrap" id="cite-ref-zeldawikiFairyQueen2026"><a class="dt-cite" href="#ref-zeldawikiFairyQueen2026">[10]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Fairy Queen</span></sup></td>
           <td>Direct ALttP functional evidence</td>
           <td>High</td>
       </tr>
       <tr>
           <td>Fairies explicitly cleanse contaminated seawater</td>
-          <td>Cross-game direct statement (<em>Oracle of Ages</em>)<sup class="dt-cite-wrap" id="cite-ref-zeldawikiFairyQueen2026"><a class="dt-cite" href="#ref-zeldawikiFairyQueen2026">[7]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Fairy Queen</span></sup></td>
+          <td>Cross-game direct statement (<em>Oracle of Ages</em>)<sup class="dt-cite-wrap" id="cite-ref-zeldawikiFairyQueen2026"><a class="dt-cite" href="#ref-zeldawikiFairyQueen2026">[10]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Fairy Queen</span></sup></td>
           <td>Medium</td>
       </tr>
       <tr>
@@ -400,24 +392,24 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
 <h3 id="cross-game-pattern">
   Cross-Game Pattern
   <a class="section-anchor" href="#cross-game-pattern" aria-label="Link to section Cross-Game Pattern">#</a>
-</h3><p>Across the series, Nintendo repeatedly uses hidden discharge as a design pattern, with an important caveat. Each Zelda title is a distinct topographical instance of Hyrule. ALttP is not hydrologically continuous with <em>Ocarina of Time</em>, <em>Twilight Princess</em>, or <em>Tears of the Kingdom</em>. The lakes share names and broad geography, but not necessarily identical drainage geometry or world structure. Cross-game patterns are therefore structural analogies, not continuity proofs, and not substitutes for ALttP-internal evidence.</p>
-<p>In <em>Ocarina of Time</em>, Lake Hylia has a submerged tunnel to Zora&rsquo;s Domain and can be drained or refilled by upstream events. In <em>Twilight Princess</em>, it depends visibly on Zora water supply and drops when that supply is cut. In <em>Tears of the Kingdom</em>, a surface whirlpool leads directly into a cave below the lake<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup>. Hidden hydraulic links are a recurring design choice. This supports the ALttP reading, but the Great Swamp–Swamp Palace link still carries more evidential weight because it is internal to ALttP.</p>
+</h3><p>Across the series, Nintendo repeatedly uses hidden discharge as a design pattern, with an important caveat: each Zelda title is a distinct topographical instance of Hyrule. ALttP is not hydrologically continuous with <em>Ocarina of Time</em>, <em>Twilight Princess</em>, or <em>Tears of the Kingdom</em>. Lakes may share names and broad geography, but not identical drainage geometry or world structure. Cross-game patterns are therefore structural analogies, not continuity proofs, and not substitutes for ALttP-internal evidence.</p>
+<p>In <em>Ocarina of Time</em>, Lake Hylia has a submerged tunnel to Zora&rsquo;s Domain and can be drained or refilled by upstream events. In <em>Twilight Princess</em>, it depends visibly on Zora water supply and drops when that supply is cut. In <em>Tears of the Kingdom</em>, a surface whirlpool leads directly into a cave below the lake.<sup class="dt-cite-wrap" id="cite-ref-zeldawikiLakeHylia2026"><a class="dt-cite" href="#ref-zeldawikiLakeHylia2026">[1]</a><span class="dt-cite-pop" role="note"><strong>Zelda Wiki</strong> (2026). Lake Hylia</span></sup> Hidden hydraulic links are a recurring design choice. This supports the ALttP reading, but the Great Swamp–Swamp Palace link still carries more evidential weight because it is internal to ALttP.</p>
 <h3 id="map-comparison-confounders">
   Map-Comparison Confounders
   <a class="section-anchor" href="#map-comparison-confounders" aria-label="Link to section Map-Comparison Confounders">#</a>
-</h3><p>Community map-comparison discussions raise two recurring confounders in cross-game Lake Hylia arguments: uncertain map orientation between titles, and possible reuse of the same toponym for different lakes in different eras<sup class="dt-cite-wrap" id="cite-ref-redditLakeHyliaMapThread2018"><a class="dt-cite" href="#ref-redditLakeHyliaMapThread2018">[8]</a><span class="dt-cite-pop" role="note"><strong>weplantsarehappy et al.</strong> (2018). Let&#39;s look at some maps! Lake Hylia (ALttP vs Minish Cap)</span></sup>.</p>
+</h3><p>Community map-comparison discussions raise two recurring confounders in cross-game Lake Hylia arguments: uncertain map orientation between titles, and possible reuse of the same toponym for different lakes in different eras.<sup class="dt-cite-wrap" id="cite-ref-redditLakeHyliaMapThread2018"><a class="dt-cite" href="#ref-redditLakeHyliaMapThread2018">[7]</a><span class="dt-cite-pop" role="note"><strong>weplantsarehappy et al.</strong> (2018). Let&#39;s look at some maps! Lake Hylia (ALttP vs Minish Cap)</span></sup></p>
 <p>Neither point resolves ALttP hydrology directly, but both caution against over-reading geometric alignment as continuity proof. We use those claims as low-confidence interpretive context rather than primary evidence.</p>
-<h2 id="alternative-explanations">
-  Alternative Explanations
-  <a class="section-anchor" href="#alternative-explanations" aria-label="Link to section Alternative Explanations">#</a>
-</h2><p>This section revisits the early hypothesis set and records the remaining uncertainty after the main results.</p>
-<p>Residual uncertainty now centers on three possibilities: strict closure (H0) as a formal null under climate uncertainty, map abstraction (H1) as an unfalsifiable cartographic explanation, and unresolved partitioning among non-surface mechanisms (H2/H3/H4b). The key unresolved discriminator remains route-level evidence for net export rather than recirculation.</p>
 <h2 id="conclusion">
   Conclusion
   <a class="section-anchor" href="#conclusion" aria-label="Link to section Conclusion">#</a>
-</h2><p>In <em>A Link to the Past</em>, Lake Hylia receives persistent inflow without a mapped surface outlet. Under standard mass-balance logic, that pattern requires an effective loss term outside visible surface routing if long-run water level and freshness are to remain stable.</p>
-<p>Current evidence favors hidden discharge over true closure. The strongest baseline is terrestrial subsurface outflow (H2), while magical pathways (H3, H4b) remain testable but unconfirmed until direct hydraulic effects are demonstrated in ALttP itself.</p>
-<p>Cross-game parallels are useful structural context, not proof, because each title is a distinct topographic instance. The main unresolved task is still empirical: destination mapping of Lake Hylia whirlpool routes to determine whether net export occurs.</p>
+</h2><p>Current evidence favors hidden discharge over true closure. A terrestrial subsurface baseline (H2) is the most conservative interpretation, while magical pathways (H3, H4b) remain plausible but unconfirmed.</p>
+<p>Remaining uncertainty is concentrated in three places: strict closure (H0) remains the formal null under climate uncertainty, map abstraction (H1) remains a hard-to-test cartographic alternative, and the relative contribution of non-surface mechanisms (H2/H3/H4b) is unresolved.</p>
+<p>The main unresolved task is empirical: destination mapping of Lake Hylia whirlpool routes to determine whether net export occurs or whether recirculation dominates.</p>
+<p>Future work could operationalize an inflow magnitude proxy for comparative stress-testing of H0. A reproducible index</p>
+<p>$$
+I = \frac{W U N_{in}}{A_{lake}},
+$$</p>
+<p>with mapped inflow width $W$, current speed proxy $U$, number of persistent inflow entries $N_{in}$, and lake area $A_{lake}$, would quantify inflow pressure per unit lake area and help prioritize which routing tests are most likely to discriminate among H0/H2/H3. Future work should also add a transparent evidence-weighting protocol that distinguishes direct ALttP observations, cross-game analogies, and hydrologic inferences when ranking H0-H4.</p>
 
 
     
@@ -432,45 +424,39 @@ A larger $I$ means larger inflow per unit lake area and, therefore, larger requi
 </h3><ol>
 <li>Appendix S1: Terminal-Lake vs. Open-Lake Salinity Behavior.</li>
 <li>Appendix S2: Symbolic Sensitivity of Hidden Outflow Terms.</li>
-<li>Appendix S3: Three Discriminating Predictions (In-Game Observable).</li>
+<li>Appendix S3: Three Discriminating Predictions (In-Game Observables).</li>
 <li>Appendix S4: Dated ALttP Water-Asset Timeline (Anti-Overweighting Control).</li>
 </ol>
-<h3 id="scope-note">
-  Scope Note
-  <a class="section-anchor" href="#scope-note" aria-label="Link to section Scope Note">#</a>
-</h3><p>This article treats game geography as a conceptual hydrology model, not as literal physical simulation. The goal is explanatory coherence across map features, event logic, and warp behavior.</p>
-<h3 id="methods-sketch">
-  Methods Sketch
-  <a class="section-anchor" href="#methods-sketch" aria-label="Link to section Methods Sketch">#</a>
-</h3><ol>
-<li>Read visible channels as a classical surface network.</li>
-<li>Add warp links as nonlocal transport edges.</li>
-<li>Separate Light World and Dark World as coupled but distinct basins.</li>
-<li>Test whether mass balance can remain stable for Lake Hylia under this combined graph.</li>
-</ol>
-<h3 id="limitations">
-  Limitations
-  <a class="section-anchor" href="#limitations" aria-label="Link to section Limitations">#</a>
-</h3><p>Map scale, transitions, and gameplay abstractions likely compress or omit intermediate channels.</p>
 <hr>
 <h3 id="appendix-s1-terminal-lake-vs-open-lake-salinity-behavior">
   Appendix S1: Terminal-Lake vs. Open-Lake Salinity Behavior
   <a class="section-anchor" href="#appendix-s1-terminal-lake-vs-open-lake-salinity-behavior" aria-label="Link to section Appendix S1: Terminal-Lake vs. Open-Lake Salinity Behavior">#</a>
 </h3><h4 id="salt-balance-framework">Salt-Balance Framework</h4><p>For any lake, the dissolved-load balance is:</p>
 <p>$$\frac{d(C \cdot S)}{dt} = C_{in} \cdot Q_{in} - C \cdot Q_{out},$$</p>
-<p>where $C$ is lake solute concentration, $S$ is lake storage volume, $C_{in}$ is inflow concentration, and $Q_{out}$ is surface outflow. Precipitation is assumed dilute ($C_P \approx 0$). Subsurface and warp pathways enter as additional $Q_{out}$ terms if present.</p>
+<p>where $C$ is lake solute concentration, $S$ is lake storage volume, $C_{in}$ is inflow concentration, and $Q_{out}$ is surface outflow. Precipitation is assumed dilute ($C_P \approx 0$).</p>
+<p>To align with the main paper&rsquo;s notation, define the total dissolved-load export term</p>
+<p>$$
+Q_{exp} \equiv Q_{out} + Q_{sub} + Q_{warp},
+$$</p>
+<p>so the same balance can be written as</p>
+<p>$$
+\frac{d(C \cdot S)}{dt} = C_{in} \cdot Q_{in} - C \cdot Q_{exp}.
+$$</p>
+<p>This keeps the salt argument and the storage-balance argument on the same term structure.</p>
 <h4 id="terminal-lake-q_out--0">Terminal Lake ($Q_{out} = 0$)</h4><p>When there is no surface outlet and no other export pathway, the right-hand side reduces to $C_{in} \cdot Q_{in} \geq 0$, so $C \cdot S$ can only increase. If storage $S$ is approximately stable (maintained by evaporation), lake concentration $C$ must increase monotonically. Because evaporation removes water but not solutes, no restoring export feedback appears.</p>
 <h4 id="open-lake-q_out--0">Open Lake ($Q_{out} &gt; 0$)</h4><p>With surface outflow, the salt balance at steady state ($d/dt = 0$) gives a finite equilibrium concentration:</p>
 <p>$$C^* = \frac{C_{in} \cdot Q_{in}}{Q_{out}}.$$</p>
-<p>If water balance holds without evaporation ($Q_{out} \approx Q_{in}$), then $C^* \approx C_{in}$: lake salinity tracks inflow salinity and stays fresh. Even with evaporative loss reducing $Q_{out}$ below $Q_{in}$, $Q_{in}/Q_{out}$ remains bounded, so $C^<em>$ stays finite. Higher concentration increases exported dissolved load per unit outflow, providing restoring feedback toward $C^</em>$.</p>
+<p>If water balance holds without evaporation ($Q_{out} \approx Q_{in}$), then $C^* \approx C_{in}$: lake salinity tracks inflow salinity and stays fresh. Even with evaporative loss reducing $Q_{out}$ below $Q_{in}$, $Q_{in}/Q_{out}$ remains bounded, so $C^*$ stays finite.</p>
+<p>Higher concentration increases exported dissolved load per unit outflow, providing restoring feedback toward $C^*$.</p>
 <p>The same argument applies when export is subsurface or warp-mediated rather than surface flow: any pathway carrying dissolved load at lake concentration can support a freshwater steady state.</p>
 <h4 id="climate-forcing-affects-rate-not-direction">Climate Forcing Affects Rate, Not Direction</h4><p>Under <strong>humid forcing</strong> (high $P$, moderate $E$), a terminal lake still concentrates solutes, but more slowly because dilution is stronger. Under <strong>semi-humid forcing</strong> (moderate $P$, higher $E$), concentration accelerates. In both regimes, direction is unchanged: terminal basins salinize; open basins approach bounded steady state. Climate changes timescale, not outcome direction.</p>
 <h4 id="implication-for-lake-hylia">Implication for Lake Hylia</h4><p>Lake Hylia receives sustained inflow and supports Zoras and fish species sensitive to water quality. These observations are inconsistent with long-run terminal-lake behavior under plausible forcing:</p>
 <ol>
 <li>A purely evaporative terminal lake (H0) predicts progressive solute accumulation regardless of climate regime; freshwater persistence contradicts this.</li>
 <li>Freshwater appearance is therefore independent evidence against terminal closure, separate from the storage-balance argument.</li>
-<li>Only a configuration with at least one dissolved-load export pathway — surface ($Q_{out}$), subsurface ($Q_{sub}$), or warp-mediated ($Q_{warp}$) — supports a bounded freshwater steady state.</li>
+<li>Only a configuration with at least one dissolved-load export pathway - surface ($Q_{out}$), subsurface ($Q_{sub}$), or warp-mediated ($Q_{warp}$) - supports a bounded freshwater steady state.</li>
 </ol>
+<p>H4a (quality filtering without volumetric export) can improve apparent water quality but does not, by itself, supply the volumetric term needed for storage balance.</p>
 <p>This appendix therefore provides a second diagnostic independent of the $\Delta S$ argument: persistent freshness requires an active export pathway.</p>
 <hr>
 <h3 id="appendix-s2-symbolic-sensitivity-of-hidden-outflow-terms">
@@ -517,13 +503,14 @@ $$</p>
 <p>Under humid forcing, $B$ is typically smaller (higher $P$ but often lower evaporative demand relative to available water), so the minimally sufficient hidden-outflow boundary shifts toward the origin. Under semi-humid forcing, higher effective evaporative demand can either reduce or increase $B$ depending on concurrent changes in $P$, $Q_{in}$, and mapped $Q_{out}$; the criterion is unchanged, but the threshold magnitude $B$ shifts with forcing.</p>
 <p>Result: when mapped terms leave $B&gt;0$, long-run stability requires nonzero hidden outflow with feasible combinations on or above $Q_{sub}+Q_{warp}=B$.</p>
 <hr>
-<h3 id="appendix-s3-three-discriminating-predictions-in-game-observable">
-  Appendix S3: Three Discriminating Predictions (In-Game Observable)
-  <a class="section-anchor" href="#appendix-s3-three-discriminating-predictions-in-game-observable" aria-label="Link to section Appendix S3: Three Discriminating Predictions (In-Game Observable)">#</a>
+<h3 id="appendix-s3-three-discriminating-predictions-in-game-observables">
+  Appendix S3: Three Discriminating Predictions (In-Game Observables)
+  <a class="section-anchor" href="#appendix-s3-three-discriminating-predictions-in-game-observables" aria-label="Link to section Appendix S3: Three Discriminating Predictions (In-Game Observables)">#</a>
 </h3><p>These predictions are designed to separate two competing regimes using only ALttP-observable constraints: <strong>subsurface-dominant</strong> hidden discharge ($Q_{sub} \gg Q_{warp}$) versus <strong>warp-dominant</strong> hidden discharge ($Q_{warp} \gg Q_{sub}$).</p>
-<h4 id="prediction-1-event-gate-coupling-signature">Prediction 1: Event-Gate Coupling Signature</h4><p>If hidden discharge is warp-dominant, Lake Hylia state should show conditional coupling to world-state gates already known to affect magical water routing (for example, swamp watergate logic): opening or closing a relevant gate should produce a detectable change in Lake Hylia-adjacent water behavior (accessibility, connectivity, or persistence cues) within the same play session.</p>
+<p>In this framing, H3 and H4b both fall under the warp-dominant branch because each contributes to $Q_{warp}$; H4a is excluded because it does not add volumetric discharge.</p>
+<h4 id="prediction-1-event-gate-coupling-signature">Prediction 1: Event-Gate Coupling Signature</h4><p>If hidden discharge is warp-dominant, Lake Hylia state should show conditional coupling to world-state gates already known to affect magical water routing (for example, swamp watergate logic). Opening or closing a relevant gate should then produce a detectable change in Lake Hylia-adjacent water behavior (accessibility, connectivity, or persistence cues) within the same play session.</p>
 <p>If hidden discharge is subsurface-dominant, Lake Hylia behavior should be comparatively insensitive to those event-gate toggles and remain stable across gate states.</p>
-<p>Operational test: compare Lake Hylia-adjacent water cues before/after gate toggles while holding route and timing constant.</p>
+<p>Operational test: compare Lake Hylia-adjacent water cues before and after gate toggles while holding route and timing constant.</p>
 <h4 id="prediction-2-routing-topology-signature">Prediction 2: Routing Topology Signature</h4><p>If hidden discharge is warp-dominant, at least one Lake Hylia-adjacent whirlpool path should map to a net-export topology (destination outside the local recirculation loop, or lower-head sink with no compensating return path).</p>
 <p>If hidden discharge is subsurface-dominant, whirlpool routing may remain closed-loop or bidirectional recirculation with zero net export, while long-run stability is still explained by non-warp leakage.</p>
 <p>Operational test: frame-by-frame destination audit for all Lake Hylia-adjacent whirlpools, with each route labeled <code>net-export</code> or <code>recirculation</code>.</p>
@@ -686,6 +673,18 @@ $$</p>
       </li>
       
       
+      <li id="ref-anyAustinHyruleRivers">
+        
+          <span class="ref-author">Any Austin</span>
+          <span class="ref-year"> (2025)</span>
+          <span class="ref-title">. Where Do Hyrule&#39;s Rivers Go?</span>
+          <span class="ref-journal">. <em>YouTube</em></span>
+          . <a href="https://www.youtube.com/watch?v=gcS1HIci4hQ">https://www.youtube.com/watch?v=gcS1HIci4hQ</a>
+        
+        <a class="backref" href="#cite-ref-anyAustinHyruleRivers" aria-label="Back to citation">↩</a>
+      </li>
+      
+      
       <li id="ref-zeldawikiWhirlpoolWaterway2026">
         
           <span class="ref-author">Zelda Wiki</span>
@@ -695,6 +694,42 @@ $$</p>
           . <a href="https://zeldawiki.wiki/wiki/Whirlpool_Waterway">https://zeldawiki.wiki/wiki/Whirlpool_Waterway</a>
         
         <a class="backref" href="#cite-ref-zeldawikiWhirlpoolWaterway2026" aria-label="Back to citation">↩</a>
+      </li>
+      
+      
+      <li id="ref-zeldadungeonMaps">
+        
+          <span class="ref-author">Zelda Dungeon</span>
+          <span class="ref-year"> (2026)</span>
+          <span class="ref-title">. A Link to the Past Overworld and Dark World Maps</span>
+          <span class="ref-journal">. <em>Zelda Dungeon</em></span>
+          . <a href="https://www.zeldadungeon.net/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past">https://www.zeldadungeon.net/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past</a>
+        
+        <a class="backref" href="#cite-ref-zeldadungeonMaps" aria-label="Back to citation">↩</a>
+      </li>
+      
+      
+      <li id="ref-tcrfALttPOverworld2026">
+        
+          <span class="ref-author">The Cutting Room Floor</span>
+          <span class="ref-year"> (2026)</span>
+          <span class="ref-title">. Development: The Legend of Zelda: A Link to the Past/Overworld</span>
+          <span class="ref-journal">. <em>The Cutting Room Floor</em></span>
+          . <a href="https://tcrf.net/Development:The_Legend_of_Zelda:_A_Link_to_the_Past/Overworld">https://tcrf.net/Development:The_Legend_of_Zelda:_A_Link_to_the_Past/Overworld</a>
+        
+        <a class="backref" href="#cite-ref-tcrfALttPOverworld2026" aria-label="Back to citation">↩</a>
+      </li>
+      
+      
+      <li id="ref-redditLakeHyliaMapThread2018">
+        
+          <span class="ref-author">weplantsarehappy et al.</span>
+          <span class="ref-year"> (2018)</span>
+          <span class="ref-title">. Let&#39;s look at some maps! Lake Hylia (ALttP vs Minish Cap)</span>
+          <span class="ref-journal">. <em>r/truezelda (Reddit discussion thread)</em></span>
+          . <a href="https://old.reddit.com/r/truezelda/comments/85ce92/lets_look_at_some_maps_lake_hylia_alttp_vs_minish/">https://old.reddit.com/r/truezelda/comments/85ce92/lets_look_at_some_maps_lake_hylia_alttp_vs_minish/</a>
+        
+        <a class="backref" href="#cite-ref-redditLakeHyliaMapThread2018" aria-label="Back to citation">↩</a>
       </li>
       
       
@@ -722,18 +757,6 @@ $$</p>
       </li>
       
       
-      <li id="ref-tcrfALttPOverworld2026">
-        
-          <span class="ref-author">The Cutting Room Floor</span>
-          <span class="ref-year"> (2026)</span>
-          <span class="ref-title">. Development: The Legend of Zelda: A Link to the Past/Overworld</span>
-          <span class="ref-journal">. <em>The Cutting Room Floor</em></span>
-          . <a href="https://tcrf.net/Development:The_Legend_of_Zelda:_A_Link_to_the_Past/Overworld">https://tcrf.net/Development:The_Legend_of_Zelda:_A_Link_to_the_Past/Overworld</a>
-        
-        <a class="backref" href="#cite-ref-tcrfALttPOverworld2026" aria-label="Back to citation">↩</a>
-      </li>
-      
-      
       <li id="ref-zeldawikiFairyQueen2026">
         
           <span class="ref-author">Zelda Wiki</span>
@@ -743,18 +766,6 @@ $$</p>
           . <a href="https://zeldawiki.wiki/wiki/Fairy_Queen">https://zeldawiki.wiki/wiki/Fairy_Queen</a>
         
         <a class="backref" href="#cite-ref-zeldawikiFairyQueen2026" aria-label="Back to citation">↩</a>
-      </li>
-      
-      
-      <li id="ref-redditLakeHyliaMapThread2018">
-        
-          <span class="ref-author">weplantsarehappy et al.</span>
-          <span class="ref-year"> (2018)</span>
-          <span class="ref-title">. Let&#39;s look at some maps! Lake Hylia (ALttP vs Minish Cap)</span>
-          <span class="ref-journal">. <em>r/truezelda (Reddit discussion thread)</em></span>
-          . <a href="https://old.reddit.com/r/truezelda/comments/85ce92/lets_look_at_some_maps_lake_hylia_alttp_vs_minish/">https://old.reddit.com/r/truezelda/comments/85ce92/lets_look_at_some_maps_lake_hylia_alttp_vs_minish/</a>
-        
-        <a class="backref" href="#cite-ref-redditLakeHyliaMapThread2018" aria-label="Back to citation">↩</a>
       </li>
       
     </ol>

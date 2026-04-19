@@ -2,23 +2,8 @@
 
 1. Appendix S1: Terminal-Lake vs. Open-Lake Salinity Behavior.
 2. Appendix S2: Symbolic Sensitivity of Hidden Outflow Terms.
-3. Appendix S3: Three Discriminating Predictions (In-Game Observable).
+3. Appendix S3: Three Discriminating Predictions (In-Game Observables).
 4. Appendix S4: Dated ALttP Water-Asset Timeline (Anti-Overweighting Control).
-
-### Scope Note
-
-This article treats game geography as a conceptual hydrology model, not as literal physical simulation. The goal is explanatory coherence across map features, event logic, and warp behavior.
-
-### Methods Sketch
-
-1. Read visible channels as a classical surface network.
-2. Add warp links as nonlocal transport edges.
-3. Separate Light World and Dark World as coupled but distinct basins.
-4. Test whether mass balance can remain stable for Lake Hylia under this combined graph.
-
-### Limitations
-
-Map scale, transitions, and gameplay abstractions likely compress or omit intermediate channels.
 
 ---
 
@@ -30,7 +15,21 @@ For any lake, the dissolved-load balance is:
 
 $$\frac{d(C \cdot S)}{dt} = C_{in} \cdot Q_{in} - C \cdot Q_{out},$$
 
-where $C$ is lake solute concentration, $S$ is lake storage volume, $C_{in}$ is inflow concentration, and $Q_{out}$ is surface outflow. Precipitation is assumed dilute ($C_P \approx 0$). Subsurface and warp pathways enter as additional $Q_{out}$ terms if present.
+where $C$ is lake solute concentration, $S$ is lake storage volume, $C_{in}$ is inflow concentration, and $Q_{out}$ is surface outflow. Precipitation is assumed dilute ($C_P \approx 0$).
+
+To align with the main paper's notation, define the total dissolved-load export term
+
+$$
+Q_{exp} \equiv Q_{out} + Q_{sub} + Q_{warp},
+$$
+
+so the same balance can be written as
+
+$$
+\frac{d(C \cdot S)}{dt} = C_{in} \cdot Q_{in} - C \cdot Q_{exp}.
+$$
+
+This keeps the salt argument and the storage-balance argument on the same term structure.
 
 #### Terminal Lake ($Q_{out} = 0$)
 
@@ -42,7 +41,9 @@ With surface outflow, the salt balance at steady state ($d/dt = 0$) gives a fini
 
 $$C^* = \frac{C_{in} \cdot Q_{in}}{Q_{out}}.$$
 
-If water balance holds without evaporation ($Q_{out} \approx Q_{in}$), then $C^* \approx C_{in}$: lake salinity tracks inflow salinity and stays fresh. Even with evaporative loss reducing $Q_{out}$ below $Q_{in}$, $Q_{in}/Q_{out}$ remains bounded, so $C^*$ stays finite. Higher concentration increases exported dissolved load per unit outflow, providing restoring feedback toward $C^*$.
+If water balance holds without evaporation ($Q_{out} \approx Q_{in}$), then $C^* \approx C_{in}$: lake salinity tracks inflow salinity and stays fresh. Even with evaporative loss reducing $Q_{out}$ below $Q_{in}$, $Q_{in}/Q_{out}$ remains bounded, so $C^*$ stays finite. 
+
+Higher concentration increases exported dissolved load per unit outflow, providing restoring feedback toward $C^*$.
 
 The same argument applies when export is subsurface or warp-mediated rather than surface flow: any pathway carrying dissolved load at lake concentration can support a freshwater steady state.
 
@@ -56,7 +57,9 @@ Lake Hylia receives sustained inflow and supports Zoras and fish species sensiti
 
 1. A purely evaporative terminal lake (H0) predicts progressive solute accumulation regardless of climate regime; freshwater persistence contradicts this.
 2. Freshwater appearance is therefore independent evidence against terminal closure, separate from the storage-balance argument.
-3. Only a configuration with at least one dissolved-load export pathway — surface ($Q_{out}$), subsurface ($Q_{sub}$), or warp-mediated ($Q_{warp}$) — supports a bounded freshwater steady state.
+3. Only a configuration with at least one dissolved-load export pathway - surface ($Q_{out}$), subsurface ($Q_{sub}$), or warp-mediated ($Q_{warp}$) - supports a bounded freshwater steady state.
+
+H4a (quality filtering without volumetric export) can improve apparent water quality but does not, by itself, supply the volumetric term needed for storage balance.
 
 This appendix therefore provides a second diagnostic independent of the $\Delta S$ argument: persistent freshness requires an active export pathway.
 
@@ -121,17 +124,19 @@ Result: when mapped terms leave $B>0$, long-run stability requires nonzero hidde
 
 ---
 
-### Appendix S3: Three Discriminating Predictions (In-Game Observable)
+### Appendix S3: Three Discriminating Predictions (In-Game Observables)
 
 These predictions are designed to separate two competing regimes using only ALttP-observable constraints: **subsurface-dominant** hidden discharge ($Q_{sub} \gg Q_{warp}$) versus **warp-dominant** hidden discharge ($Q_{warp} \gg Q_{sub}$).
 
+In this framing, H3 and H4b both fall under the warp-dominant branch because each contributes to $Q_{warp}$; H4a is excluded because it does not add volumetric discharge.
+
 #### Prediction 1: Event-Gate Coupling Signature
 
-If hidden discharge is warp-dominant, Lake Hylia state should show conditional coupling to world-state gates already known to affect magical water routing (for example, swamp watergate logic): opening or closing a relevant gate should produce a detectable change in Lake Hylia-adjacent water behavior (accessibility, connectivity, or persistence cues) within the same play session.
+If hidden discharge is warp-dominant, Lake Hylia state should show conditional coupling to world-state gates already known to affect magical water routing (for example, swamp watergate logic). Opening or closing a relevant gate should then produce a detectable change in Lake Hylia-adjacent water behavior (accessibility, connectivity, or persistence cues) within the same play session.
 
 If hidden discharge is subsurface-dominant, Lake Hylia behavior should be comparatively insensitive to those event-gate toggles and remain stable across gate states.
 
-Operational test: compare Lake Hylia-adjacent water cues before/after gate toggles while holding route and timing constant.
+Operational test: compare Lake Hylia-adjacent water cues before and after gate toggles while holding route and timing constant.
 
 #### Prediction 2: Routing Topology Signature
 
@@ -161,14 +166,14 @@ The timeline below separates evidence by date and by datum type to avoid over-we
 
 | Date | Asset | Datum | Tag | Weighting rule |
 | --- | --- | --- | --- | --- |
-| 1990 (pre-release ALttP assets) | Lake Hylia | Prototype/recovered overworld material preserves Lake Hylia-linked inflow geometry in development-era data products {{< cite key="tcrfALttPOverworld2026" >}} | `reconstruction` | Treat as structural context only; do not use as stand-alone proof of final-game hydraulics. |
-| 1990 (pre-release ALttP assets) | Zora Falls / Zora's River headwaters | Development-era map layers indicate persistent upstream-to-downstream channel intent feeding the Lake Hylia side of the overworld {{< cite key="tcrfALttPOverworld2026" >}} | `reconstruction` | Use to support design continuity claims, not discharge quantification. |
-| 1991-11-21 (JP release, ALttP) | Lake Hylia | In playable overworld view, Lake Hylia receives mapped inflow while no explicit downstream surface outlet is shown {{< cite key="zeldawikiLakeHylia2026" >}} | `player-map representation` | High relevance for the missing-outlet puzzle; still pair with non-map evidence before causal inference. |
-| 1991-11-21 (JP release, ALttP) | Great Swamp | Overworld representation includes swamp node and nearby routing context connected to regional water topology {{< cite key="zeldawikiGreatSwamp2026" >}} | `player-map representation` | Use for topology and adjacency only; do not infer cross-world discharge from map geometry alone. |
-| 1991-11-21 (JP release, ALttP) | Zora Falls / Zora's River | Playable area and river course visually establish persistent upstream source feeding toward Lake Hylia {{< cite key="zeldawikiLakeHylia2026" >}} | `environment screen` | Use as direct inflow evidence in balance terms ($Q_{in}>0$), not as outlet evidence. |
-| 1991-11-21 (JP release, ALttP) | Great Swamp watergate -> Swamp Palace state | In-game event interaction shows Light World drainage control altering Dark World palace water state {{< cite key="zeldawikiGreatSwamp2026" >}} | `environment screen` | Highest-weight ALttP-internal evidence for non-surface hydraulic coupling. |
-| 1992-04-13 (NA release, ALttP) | Lake Hylia | Regional release reproduces the same operative map logic: visible inflow, no clearly mapped surface outlet {{< cite key="zeldawikiLakeHylia2026" >}} | `player-map representation` | Cross-check for consistency across releases; do not count as an independent mechanism proof if geometry is unchanged. |
-| 1992-09-24 (EU release, ALttP) | Great Swamp / Lake Hylia network context | Regional release preserves relevant topology and event structure used in the argument {{< cite key="zeldawikiGreatSwamp2026" >}} {{< cite key="zeldawikiLakeHylia2026" >}} | `player-map representation` | Replication strengthens robustness but still remains one evidence class. |
+| 1990 (pre-release ALttP assets) | Lake Hylia | Prototype/recovered overworld material preserves Lake Hylia-linked inflow geometry in development-era data products {{< cite key="tcrfALttPOverworld2026">}} | `reconstruction` | Treat as structural context only; do not use as stand-alone proof of final-game hydraulics. |
+| 1990 (pre-release ALttP assets) | Zora Falls / Zora's River headwaters | Development-era map layers indicate persistent upstream-to-downstream channel intent feeding the Lake Hylia side of the overworld {{< cite key="tcrfALttPOverworld2026">}} | `reconstruction` | Use to support design continuity claims, not discharge quantification. |
+| 1991-11-21 (JP release, ALttP) | Lake Hylia | In playable overworld view, Lake Hylia receives mapped inflow while no explicit downstream surface outlet is shown {{< cite key="zeldawikiLakeHylia2026">}} | `player-map representation` | High relevance for the missing-outlet puzzle; still pair with non-map evidence before causal inference. |
+| 1991-11-21 (JP release, ALttP) | Great Swamp | Overworld representation includes swamp node and nearby routing context connected to regional water topology {{< cite key="zeldawikiGreatSwamp2026">}} | `player-map representation` | Use for topology and adjacency only; do not infer cross-world discharge from map geometry alone. |
+| 1991-11-21 (JP release, ALttP) | Zora Falls / Zora's River | Playable area and river course visually establish persistent upstream source feeding toward Lake Hylia {{< cite key="zeldawikiLakeHylia2026">}} | `environment screen` | Use as direct inflow evidence in balance terms ($Q_{in}>0$), not as outlet evidence. |
+| 1991-11-21 (JP release, ALttP) | Great Swamp watergate -> Swamp Palace state | In-game event interaction shows Light World drainage control altering Dark World palace water state {{< cite key="zeldawikiGreatSwamp2026">}} | `environment screen` | Highest-weight ALttP-internal evidence for non-surface hydraulic coupling. |
+| 1992-04-13 (NA release, ALttP) | Lake Hylia | Regional release reproduces the same operative map logic: visible inflow, no clearly mapped surface outlet {{< cite key="zeldawikiLakeHylia2026">}} | `player-map representation` | Cross-check for consistency across releases; do not count as an independent mechanism proof if geometry is unchanged. |
+| 1992-09-24 (EU release, ALttP) | Great Swamp / Lake Hylia network context | Regional release preserves relevant topology and event structure used in the argument {{< cite key="zeldawikiGreatSwamp2026">}} {{< cite key="zeldawikiLakeHylia2026">}} | `player-map representation` | Replication strengthens robustness but still remains one evidence class. |
 
 #### Aggregation Protocol
 
